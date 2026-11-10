@@ -250,7 +250,6 @@ export default function Navbar() {
               <div key={link.label}>
                 <Link
                   href={link.href}
-                  onClick={() => setMobileOpen(false)}
                   className="flex items-center px-3 py-2.5 text-sm font-semibold text-gray-800 hover:text-tw-blue hover:bg-blue-50 rounded-xl transition-colors duration-150"
                 >
                   {link.label}
@@ -261,7 +260,6 @@ export default function Navbar() {
                       <Link
                         key={sub.label}
                         href={sub.href}
-                        onClick={() => setMobileOpen(false)}
                         className="flex items-center px-3 py-2 text-sm text-gray-600 hover:text-tw-blue hover:bg-blue-50 rounded-xl transition-colors duration-150"
                       >
                         {sub.label}
@@ -273,11 +271,11 @@ export default function Navbar() {
             ))}
 
             <div className="pt-3 border-t border-gray-100 flex flex-col gap-2">
-              <Link href="/account" onClick={() => setMobileOpen(false)} className="btn-primary w-full justify-center">
+              <Link href="/account" className="btn-primary w-full justify-center">
                 <User size={16} />
                 Sign In
               </Link>
-              <Link href="/vendor/register" onClick={() => setMobileOpen(false)} className="btn-outline w-full justify-center text-sm">
+              <Link href="/vendor/register" className="btn-outline w-full justify-center text-sm">
                 Become a Vendor
               </Link>
             </div>
