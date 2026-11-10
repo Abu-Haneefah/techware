@@ -1,0 +1,8 @@
+.next
+node_modules
+.env.local
+.env*.local
+Techware_3D_Models_Agent_Prompt.md
+Techware_Brand_Guidelines.pdf
+Techware_Database_Agent_Prompt.md
+Techware_Website_v1.pdf

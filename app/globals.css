@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --tw-blue: #1D4ED8;
+  --tw-blue-dark: #1a3fc4;
+  --tw-blue-light: #3B6FEA;
+  --tw-navy: #0B1B3F;
+  --tw-navy-light: #112354;
+  --tw-green: #22C55E;
+  --tw-green-dark: #16A34A;
+  --tw-green-light: #4ADE80;
+  --tw-grey: #F3F4F6;
+  --tw-text: #111827;
+  --tw-text-muted: #6B7280;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--tw-text);
+  background: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer components {
+  /* ---- Buttons ---- */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-tw-blue text-white font-semibold rounded-xl transition-all duration-200 hover:bg-tw-blue-dark hover:shadow-blue active:scale-95 focus:outline-none focus:ring-2 focus:ring-tw-blue focus:ring-offset-2;
+  }
+
+  .btn-green {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-tw-green text-white font-semibold rounded-xl transition-all duration-200 hover:bg-tw-green-dark hover:shadow-green active:scale-95 focus:outline-none focus:ring-2 focus:ring-tw-green focus:ring-offset-2;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-tw-blue text-tw-blue font-semibold rounded-xl transition-all duration-200 hover:bg-tw-blue hover:text-white active:scale-95 focus:outline-none focus:ring-2 focus:ring-tw-blue focus:ring-offset-2;
+  }
+
+  .btn-outline-white {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-white text-white font-semibold rounded-xl transition-all duration-200 hover:bg-white hover:text-tw-navy active:scale-95 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2;
+  }
+
+  /* ---- Cards ---- */
+  .card {
+    @apply bg-white rounded-2xl shadow-card transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1;
+  }
+
+  .card-product {
+    @apply bg-white rounded-2xl shadow-card transition-all duration-300 hover:shadow-card-hover hover:-translate-y-1 overflow-hidden border border-gray-100;
+  }
+
+  /* ---- Sections ---- */
+  .section-padding {
+    @apply px-4 py-16 md:px-6 lg:px-8;
+  }
+
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+
+  /* ---- Typography ---- */
+  .section-title {
+    @apply text-2xl md:text-3xl lg:text-4xl font-bold text-tw-navy;
+  }
+
+  .section-subtitle {
+    @apply text-base md:text-lg text-tw-text-muted mt-3;
+  }
+
+  /* ---- Badge ---- */
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold;
+  }
+
+  .badge-blue {
+    @apply badge bg-blue-100 text-tw-blue;
+  }
+
+  .badge-green {
+    @apply badge bg-green-100 text-tw-green-dark;
+  }
+
+  .badge-navy {
+    @apply badge bg-tw-navy text-white;
+  }
+
+  /* ---- Pill spec tags ---- */
+  .spec-pill {
+    @apply inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-white/30 bg-white/10 backdrop-blur-sm text-white text-sm font-medium;
+  }
+
+  /* ---- Gradient text ---- */
+  .gradient-text {
+    @apply bg-gradient-to-r from-tw-blue to-tw-green bg-clip-text text-transparent;
+  }
+}
+
+@layer utilities {
+  .animate-delay-100 { animation-delay: 100ms; }
+  .animate-delay-200 { animation-delay: 200ms; }
+  .animate-delay-300 { animation-delay: 300ms; }
+  .animate-delay-400 { animation-delay: 400ms; }
+  .animate-delay-500 { animation-delay: 500ms; }
+
+  .text-balance { text-wrap: balance; }
+
+  /* Scrollbar */
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+}
